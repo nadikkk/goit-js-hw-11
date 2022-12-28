@@ -15,11 +15,15 @@ body {
 	Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 10px;
  }
+a {
+	display: block;
+	flex-grow: 1;
+}
 img {
 	display: block;
 	width: 100%;
-	height: auto;
-	flex-grow: 1;
+	height: 100%;
+	
 }
 form {
 	position: fixed;
