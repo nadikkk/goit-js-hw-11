@@ -26,9 +26,10 @@ function onSubmitNameImg(e) {
 	gallery.innerHTML='';
 	btnButton.classList.remove('visually-hidden');
 }
-function fetchNameImg(nameImg, page) {
-	return fetch(`https://pixabay.com/api?key=32401247-d831a8438a21bb86fb66fd7b1&q=${nameImg}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`)
-	.then(r => r.json())
+async function fetchNameImg(nameImg, page) {
+	const response = await  fetch(`https://pixabay.com/api/?key=32401247-d831a8438a21bb86fb66fd7b1&q=${nameImg}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${page}`);
+	const imgs = await response.json();
+	return imgs;
 }
 function renderCardImg({hits, total}) {
 	if (total===0) {
