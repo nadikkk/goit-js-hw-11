@@ -69,5 +69,3 @@ function onLoadMore(e) {
 	})
 	.catch(error=>console.log(error));
 }
-
-
